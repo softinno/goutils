@@ -4,17 +4,17 @@ import (
 	"fmt"
     "testing"
     "time"
-    "github.com/softinno/goutil"
+    "github.com/softinno/goutils"
 )
 
 // Test for pool of workers
 func TestRunWaitNWorkers(t *testing.T) {
-	_ = goutil.WorkerT (goutil.WorkerExample)
-	_ = goutil.WorkerT (WorkerDummy)
+	_ = goutils.WorkerT (goutils.WorkerExample)
+	_ = goutils.WorkerT (WorkerDummy)
 	
-	w := goutil.WorkerExample
-	goutil.RunWaitNWorkers(w, "Example", 5, 3)
-	goutil.RunWaitNWorkers(WorkerDummy, "Dummy", 5, 3)
+	w := goutils.WorkerExample
+	goutils.RunWaitNWorkers(w, "Example", 5, 3)
+	goutils.RunWaitNWorkers(WorkerDummy, "Dummy", 5, 3)
 }
 
 // Dummy worker doing some job
